@@ -15,7 +15,7 @@ Welcome to my **30 Days of JavaScript** challenge! This repository documents my 
 
 | Day | Project Title                          | Summary (What I Did & Learned)                                                                                   | Link                          |
 | --- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| 01  | JavaScript Drum Kit                    |                                                                                                                   | [Day 1 Insights](./Day-01/)   |
+| 01  | JavaScript Drum Kit                    | Practiced DOM manipulation and event handling to trigger audio and add visual effects.                            | [Day 1 Insights](./Day-01/)   |
 | 02  | JS and CSS Clock                       |                                                                                                                   | [Day 2 Insights](./Day-02/)   |
 | 03  | Playing with CSS Variables             |                                                                                                                   | [Day 3 Insights](./Day-03/)   |
 | 04  | Array Cardio Day 1                     |                                                                                                                   | [Day 4 Insights](./Day-04/)   |
