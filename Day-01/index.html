@@ -5,95 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drum</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
   </head>
-  <body class="min-h-screen overflow-hidden">
-    <!-- Add a header with instructions -->
-    <header
-      class=" overflow-hidden text-center p-4 text-white bg-black/50"
-    >
-      <h1 class="text-2xl md:text-4xl font-bold mb-2">JavaScript Drum Kit</h1>
-      <p class="text-sm md:text-base">Press keys A-L to play sounds</p>
-    </header>
+  <body class="h-screen md:overflow-hidden">
+    <div class="bg-[url(./background.jpg)] bg-cover bg-center overflow-hidden">
+      <!-- Header with instructions -->
+      <header class="text-center p-4 text-white bg-black/60 rounded-2xl m-4">
+        <h1 class="text-2xl md:text-4xl font-bold mb-2">JavaScript Drum Kit</h1>
+        <p class="text-sm md:text-base">Press keys A-L to play sounds</p>
+      </header>
 
-    <!-- for centering the buttons -->
-    <div
-      class="flex items-center justify-center flex-wrap gap-3 md:gap-5 min-h-screen bg-[url(./background.jpg)] bg-cover bg-center p-4"
-    >
+      <!-- for centering the buttons -->
       <div
-        class="px-8 pt-5 btn-key btn-a text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        class="flex items-center justify-center flex-wrap gap-3 md:gap-5 min-h-screen p-4"
       >
-        <div class="flex flex-col">
-          <kbd class="text-center">A</kbd
-          ><span class="text-sm text-yellow-500 pb-2">CLAP</span>
+        <div
+          class="px-8 pt-5 btn-key btn-a text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">A</kbd
+            ><span class="text-sm text-yellow-500 pb-2">CLAP</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-s text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">S</kbd
-          ><span class="text-sm text-yellow-500 pb-2">HIHAT</span>
+        <div
+          class="px-8 pt-5 btn-key btn-s text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">S</kbd
+            ><span class="text-sm text-yellow-500 pb-2">HIHAT</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-d text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">D</kbd
-          ><span class="text-sm text-yellow-500 pb-2">KICK</span>
+        <div
+          class="px-8 pt-5 btn-key btn-d text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">D</kbd
+            ><span class="text-sm text-yellow-500 pb-2">KICK</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-f text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">F</kbd
-          ><span class="text-sm text-yellow-500 pb-2">OPENHAT</span>
+        <div
+          class="px-8 pt-5 btn-key btn-f text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">F</kbd
+            ><span class="text-sm text-yellow-500 pb-2">OPENHAT</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-g text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">G</kbd
-          ><span class="text-sm text-yellow-500 pb-2">BOOM</span>
+        <div
+          class="px-8 pt-5 btn-key btn-g text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">G</kbd
+            ><span class="text-sm text-yellow-500 pb-2">BOOM</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-h text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">H</kbd
-          ><span class="text-sm text-yellow-500 pb-2">RIDE</span>
+        <div
+          class="px-8 pt-5 btn-key btn-h text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">H</kbd
+            ><span class="text-sm text-yellow-500 pb-2">RIDE</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-j text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">J</kbd
-          ><span class="text-sm text-yellow-500 pb-2">SNARE</span>
+        <div
+          class="px-8 pt-5 btn-key btn-j text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">J</kbd
+            ><span class="text-sm text-yellow-500 pb-2">SNARE</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-k text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">K</kbd
-          ><span class="text-sm text-yellow-500 pb-2">TOM</span>
+        <div
+          class="px-8 pt-5 btn-key btn-k text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">K</kbd
+            ><span class="text-sm text-yellow-500 pb-2">TOM</span>
+          </div>
         </div>
-      </div>
-      <div
-        class="px-8 pt-5 btn-key btn-l text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
-      >
-        <div class="flex flex-col">
-          <kbd class="text-center">L</kbd
-          ><span class="text-sm text-yellow-500 pb-2">TINK</span>
+        <div
+          class="px-8 pt-5 btn-key btn-l text-4xl font-medium font-mono rounded-lg bg-black/40 text-white border-black border-4 btn-key"
+        >
+          <div class="flex flex-col">
+            <kbd class="text-center">L</kbd
+            ><span class="text-sm text-yellow-500 pb-2">TINK</span>
+          </div>
         </div>
       </div>
     </div>
     <script>
-      const typingKey = document.querySelectorAll(".btn-Key");
       // --------------------------------------------
       // for the keydown event
       document.addEventListener("keydown", (event) => {
@@ -151,7 +151,7 @@
             "scale-110",
             "border-yellow-500/90",
             "duration-[1ms]",
-            "shadow-sm",
+            "shadow-md",
             "shadow-yellow-500/50"
           );
         }
