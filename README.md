@@ -3,7 +3,15 @@
 Welcome to my **30 Days of JavaScript** challenge! This repository documents my journey through the [JavaScript30](https://javascript30.com/) course by Wes Bos — a hands-on series of 30 real projects using vanilla JavaScript. No libraries, no frameworks, no compilers — just pure JS!
 
 ---
+## 🔗 Live Preview
 
+Explore all 30 projects live on GitHub Pages:
+
+🌐 **[Live Site – JavaScript30 Projects](https://itx-prash.github.io/30daysofvanillajs/)**
+
+> Each project is built using vanilla JavaScript and styled with Tailwind CSS v4+.
+
+---
 ## 🚀 **Why This Challenge?**
 
 - To go beyond theory and apply JavaScript in real mini-projects.
