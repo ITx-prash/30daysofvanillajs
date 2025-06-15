@@ -24,7 +24,7 @@ Explore all 30 projects live on GitHub Pages:
 | Day | Project Title                          | Summary (What I Did & Learned)                                                                                   | Link                          |
 | --- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | 01  | JavaScript Drum Kit                    | Practiced DOM manipulation and event handling to trigger audio and add visual effects.                            | [Day 1 Insights](./Day-01/)   |
-| 02  | JS and CSS Clock                       |                                                                                                                   | [Day 2 Insights](./Day-02/)   |
+| 02  | JS and CSS Clock                       | Built a real-time analog clock with CSS transforms and JavaScript Date object.                                   | [Day 2 Insights](./javascript30-journey/Day-02/)   |
 | 03  | Playing with CSS Variables             |                                                                                                                   | [Day 3 Insights](./Day-03/)   |
 | 04  | Array Cardio Day 1                     |                                                                                                                   | [Day 4 Insights](./Day-04/)   |
 | 05  | Flex Panel Gallery                     |                                                                                                                   | [Day 5 Insights](./Day-05/)   |
