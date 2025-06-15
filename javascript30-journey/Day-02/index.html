@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[url(./background.jpg)]">
+    <!-- container div -->
+    <div class="flex items-center justify-center h-screen">
+      <!-- circular div -->
+      <div
+        class="rounded-full p-3 bg-linear-to-r from-purple-500 via-blue-500 to-yellow-500 flex items-center justify-center md:size-96 size-80 relative"
+      >
+        <!-- inner background div -->
+        <div
+          class="rounded-full h-full w-full flex items-center justify-center bg-[#111727] relative"
+        >
+          <!-- the sec hand-->
+          <div
+            class="bg-linear-to-r from-gray-400 to to-blue-400 w-[45%] h-1 left-1/2 top-1/2 origin-left rounded-md absolute transition-transform duration-200 ease-initial"
+            id="secHand"
+          ></div>
+          <!-- the min -->
+          <div
+            class="bg-linear-to-r from-gray-400 to to-orange-400 w-[35%] h-1.5 rounded-md left-1/2 top-1/2 origin-left absolute"
+            id="minHand"
+          ></div>
+          <!-- the hr -->
+          <div
+            class="bg-linear-to-r from-gray-400 to to-red-400 w-1/6 h-2 rounded-md left-1/2 top-1/2 origin-left absolute"
+            id="hrHand"
+          ></div>
+          <span
+            class="rounded-full bg-linear-to-r/increasing from-purple-700 to-cyan-400 size-5 z-20"
+          ></span>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
