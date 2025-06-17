@@ -12,7 +12,8 @@
       <h1
         class="font-bold font-serif lg:text-7xl md:text-5xl sm:text-4xl text-3xl mx-7 my-15 text-white"
       >
-        Update CSS Variables with <span class="text-yellow-400"> JS</span>
+        Update CSS Variables with
+        <span class="text-yellow-400" id="jsText"> JS</span>
       </h1>
     </div>
     <!-- middle 3 inputs div -->
@@ -22,25 +23,42 @@
       >
         <div class="flex items-center justify-center gap-2">
           <label for="spacing" class="text-white font-medium">Spacing:</label>
-          <input type="range" id="spacing" class="mt-2" />
+          <input
+            type="range"
+            id="space"
+            class="mt-2"
+            min="0"
+            max="100"
+            value="4"
+          />
         </div>
         <div class="flex items-center justify-center gap-2">
           <label for="blur" class="text-white font-medium">Blur:</label>
-          <input type="range" id="blur" class="mt-2" />
+          <input
+            type="range"
+            id="blur"
+            class="mt-2"
+            min="0"
+            max="100"
+            value="5"
+          />
         </div>
         <div class="flex items-center gap-2">
           <label for="color" class="text-white font-medium">Base Color:</label>
-          <input type="color" id="color" class="mt-2" />
+          <input type="color" id="color" class="mt-1" />
         </div>
       </div>
     </div>
     <!-- Image Div -->
     <div class="mt-12 z-30 flex items-center justify-center">
-      <div class="bg-yellow-500 p-2 rounded-xl">
+      <div
+        class="bg-yellow-500 p-[4px] blur-[5px] rounded-lg mx-4"
+        id="imgContainer"
+      >
         <img
-          src="https://plus.unsplash.com/premium_photo-1748204567545-3bc8fd164d30?q=80&w=2135&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://t3.ftcdn.net/jpg/06/41/50/48/360_F_641504891_Sybkd5qCZfoKi84AjYEKeZFTtaW6bcgw.jpg"
           alt="Image"
-          class="w-80 md:w-96 lg:w-[800px] h-auto"
+          class="w-80 sm:w-100 md:w-150 lg:w-200 h-auto rounded-lg"
         />
       </div>
     </div>
