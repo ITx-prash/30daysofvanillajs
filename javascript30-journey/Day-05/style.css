@@ -799,6 +799,14 @@
     --tw-duration: 200ms;
     transition-duration: 200ms;
   }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
+  }
   .duration-\[1ms\] {
     --tw-duration: 1ms;
     transition-duration: 1ms;
@@ -806,10 +814,24 @@
   .ease-initial {
     --tw-ease: initial;
   }
+  .hover\:flex-1 {
+    &:hover {
+      @media (hover: hover) {
+        flex: 1;
+      }
+    }
+  }
   .hover\:flex-1\/2 {
     &:hover {
       @media (hover: hover) {
         flex: calc(1/2 * 100%);
+      }
+    }
+  }
+  .hover\:flex-2 {
+    &:hover {
+      @media (hover: hover) {
+        flex: 2;
       }
     }
   }
