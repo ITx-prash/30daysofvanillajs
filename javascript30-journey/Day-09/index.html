@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-zinc-600 text-white">
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      // Regular
+      console.log("I am just the regular one!");
+
+      // Interpolated
+      console.log("This is interpolated.... here it comes %s", "🐯");
+
+      // Styled
+      console.log(
+        "%c I am styled..",
+        "color:red; text:underline; font-size: 20px"
+      );
+
+      // warning!
+      console.warn("This is a warning!");
+
+      // Error :|
+      console.error("This is an error!");
+
+      // Info
+      console.info("This is some info!");
+
+      // Testing
+      //used to test if the code is working as expected
+      console.assert(dogs.length === 2, "Dogs array should have 2 elements"); //pass
+      console.assert(dogs.length === 3, "Dogs array should have 2 elements"); //fail
+      // clearing
+
+      console.clear();
+
+      // Viewing DOM Elements
+      const p = document.querySelector("p");
+      console.log(p);
+      console.dir(p);
+      console.clear();
+
+      // Grouping together
+      dogs.forEach((dog) => {
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}   `);
+        console.log(`${dog.name} is ${dog.age} years old!`);
+        console.groupEnd(`${dog.name}`);
+      });
+
+      // counting
+      console.count("Snickers");
+      console.count("Snickers");
+      console.count("hugo");
+      console.count("Snickers");
+      console.count("hugo");
+      console.count("Snickers");
+
+      // timing
+      // the time method is used to measure the time taken by a block of code to execute and
+      // the timeEnd method is used to stop the timer and log the elapsed time
+      console.time("fetching data");
+      // Simulating a fetch call
+      setTimeout(() => {
+        console.timeEnd("fetching data");
+      }, 1000);
+
+      //table
+      console.table(dogs);
+    </script>
+  </body>
+</html>
