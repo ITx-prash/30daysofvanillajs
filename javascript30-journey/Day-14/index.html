@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Reference VS Copy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body class="bg-[#242424]">
+    <script>
+      // start with strings, numbers and booleans
+      //   let name = "Prash",
+      //     age = 19;
+      //   value = true;
+
+      //   let name2 = name,
+      //     age2 = age,
+      //     value2 = value;
+
+      //   console.log(name2, age2, value2);
+
+      //   (name = "Prazz"), (age = 20), (value = false);
+      //   console.log(name2, age2, value2);
+
+      // Let's say we have an array
+      const players = ["Wes", "Sarah", "Ryan", "Poppy"];
+
+      // and we want to make a copy of it.
+
+      const players2 = players;
+      console.log(players, players2);
+
+      // You might think we can just do something like this:
+
+      players2[3] = "Praz";
+      console.log(players, players2); //both change
+
+      // however what happens when we update that array?
+
+      // now here is the problem!
+
+      // oh no - we have edited the original array too!
+
+      // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+      // So, how do we fix this? We take a copy instead!
+
+      // one way
+
+      const player3 = players.slice();
+
+      player3[4] = "raju";
+      console.log(players, player3);
+
+      // or create a new array and concat the old one in
+      const player4 = [].concat(players);
+
+      player4[4] = "raju21";
+      console.log(players, player4);
+
+      // or use the new ES6 Spread
+
+      const newPlayer = [...players];
+      newPlayer.pop();
+      console.log(players, newPlayer);
+
+      //   OR
+      const newPlayer2 = Array.from(players);
+      newPlayer2.pop();
+      console.log(players, newPlayer2);
+
+      // now when we update it, the original one isn't changed
+
+      // The same thing goes for objects, let's say we have a person object
+
+      // with Objects
+      const person = {
+        name: "Wes Bos",
+        age: 80,
+      };
+
+      // and think we make a copy:
+
+      // how do we take a copy instead?
+
+      //can use the spread operator:
+      const newPerson = { ...person };
+      newPerson.name = "Prash";
+      newPerson.age = 19;
+
+      // We will hopefully soon see the object ...spread >>> we saw ;)
+
+      // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+      let man = {
+        name: "myman",
+        age: 45,
+        social: { twitter: "ITx_prash", facebook: "Prashant Adhikari" },
+      };
+      console.clear();
+      let man2 = { ...man };
+      console.log(man, man2);
+      //spread operator makes a shallow copy
+      //   if i alter the 1 st level then no problem but if alter the nested items then it will cause the new object to also change the original one as the reference of the nested items is shared between the two objects
+      man2.name = "newname";
+      man2.social.twitter = "newtwitter";
+      console.log(man, man2);
+
+      // to make a deepcopy, we can use the new method in ES2021
+      let man3 = structuredClone(man);
+      man3.name = "newname";
+      man3.social.twitter = "Praz_Twitter";
+      console.clear();
+
+      console.log(man, man3);
+    </script>
+  </body>
+</html>
