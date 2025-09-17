@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Get User Media Code Along!</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="https://fav.farm/🔥" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#111111] text-white overflow-x-hidden h-screen flex flex-col overflow-hidden">
+    <!--Main Container div -->
+    <div
+      class="photobooth flex justify-center items-center flex-col p-4 rounded-lg mx-4 flex-1 w-full overflow-y-auto"
+    >
+      <!-- btn allowing to access video -->
+      <button
+        class="text-lg font-bold bg-red-600 p-2 rounded-xl m-2 max-w-66"
+        id="videoHolder"
+      >
+        Video Permission Denied!
+      </button>
+
+      <!-- Video and take photo div -->
+      <div class="flex justify-center items-center gap-3 relative">
+        <!-- video element initially hidden -->
+        <video
+          class="player -scale-x-100 rounded-xl hidden max-w-[450px]"
+        ></video>
+        <button
+          onClick="takePhoto()"
+          class="text-lg font-bold bg-blue-500 p-1 rounded-lg mt-auto absolute hidden -right-1/4 bottom-0"
+          id="takePhoto"
+        >
+          Take Photo
+        </button>
+      </div>
+
+      <!-- Controls div -->
+      <!-- controls for rgb effect -->
+      <div class="rgb border border-white rounded-lg mt-2 m-2 p-2 hidden">
+        <label for="rmin">Red Min:</label>
+        <input type="range" min="0" max="255" name="rmin" />
+        <label for="rmax">Red Max:</label>
+        <input type="range" min="0" max="255" name="rmax" />
+
+        <br />
+
+        <label for="gmin">Green Min:</label>
+        <input type="range" min="0" max="255" name="gmin" />
+        <label for="gmax">Green Max:</label>
+        <input type="range" min="0" max="255" name="gmax" />
+
+        <br />
+
+        <label for="bmin">Blue Min:</label>
+        <input type="range" min="0" max="255" name="bmin" />
+        <label for="bmax">Blue Max:</label>
+        <input type="range" min="0" max="255" name="bmax" />
+      </div>
+
+      <canvas class="photo -scale-x-100 rounded-xl hidden"></canvas>
+
+      <!-- Photo Gallery Strip -->
+      <div
+        class="strip flex flex-wrap justify-center gap-4 mt-6 p-4 bg-gray-800 rounded-lg overflow-y-auto max-h-60"
+      ></div>
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
