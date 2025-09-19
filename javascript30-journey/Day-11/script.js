@@ -4,6 +4,7 @@ const video = player.querySelector(".viewer");
 const progress = player.querySelector(".progress");
 const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
+const muteBtn = player.querySelector(".mute");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
 const fullscreen = player.querySelector(".fullscreen");
@@ -24,12 +25,32 @@ function updateBtn() {
   toggle.textContent = icon;
 }
 
+function toggleMute() {
+  video.muted = !video.muted;
+  updateMuteBtn();
+}
+
+function updateMuteBtn() {
+  if (video.muted || video.volume === 0) {
+    muteBtn.textContent = "🔇";
+  } else {
+    if (video.volume > 0.5) {
+      muteBtn.textContent = "🔊";
+    } else {
+      muteBtn.textContent = "🔉";
+    }
+  }
+}
+
 function skip() {
   video.currentTime += parseInt(this.dataset.skip);
 }
 
 function handleRangeUpdate() {
   video[this.name] = this.value;
+  if (this.name === "volume") {
+    updateMuteBtn();
+  }
 }
 
 function handleProgress() {
@@ -63,6 +84,7 @@ video.addEventListener("timeupdate", handleProgress);
 video.addEventListener("dblclick", makeFullScreen);
 
 toggle.addEventListener("click", togglePlay);
+muteBtn.addEventListener("click", toggleMute);
 
 skipButtons.forEach((btns) => {
   btns.addEventListener("click", skip);
@@ -80,3 +102,8 @@ progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mouseup", () => (mousedown = false));
 fullscreen.addEventListener("click", makeFullScreen);
+
+// Initialize volume and mute button state
+const volumeSlider = player.querySelector('input[name="volume"]');
+video.volume = volumeSlider.value; // Set video volume to match slider value
+updateMuteBtn();
